@@ -1,0 +1,24 @@
+---
+driver_plugin: vagrant
+
+driver_config:
+  box: ubuntu
+  memory: 512
+
+
+platforms:
+  - name: ubuntu
+
+
+provisioner:
+  name: chef_zero
+
+suites:
+  - name: default
+    run_list:
+      - recipe[tomcat-multi]
+    attributes:
+      dev_mode: "true"
+
+
+

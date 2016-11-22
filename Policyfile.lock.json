@@ -1,0 +1,140 @@
+{
+  "revision_id": "c1e5044f1cbd96c43632b7b530ab9aca8ac233f5c6e5c2c3257bb255dc7866cd",
+  "name": "tomcat-multi",
+  "run_list": [
+    "recipe[tomcat-multi::default]"
+  ],
+  "cookbook_locks": {
+    "tomcat-multi": {
+      "version": "0.1.0",
+      "identifier": "0972ef865944f1bda8f3ee3b4a89b33938e97516",
+      "dotted_decimal_identifier": "2659647867143409.53384536225696393.197058349331734",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    },
+    "ark": {
+      "version": "0.9.0",
+      "identifier": "6d24c101804d81cc4d59f22c75eba8643412308b",
+      "dotted_decimal_identifier": "30721183833935233.57505943959401963.185148323803275",
+      "cache_key": "ark-0.9.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ark/versions/0.9.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ark/versions/0.9.0/download",
+        "version": "0.9.0"
+      }
+    },
+    "windows": {
+      "version": "1.38.4",
+      "identifier": "beafe34c8bd8d6b2d8f5456adeb9bb47e62c426e",
+      "dotted_decimal_identifier": "53673636351695062.50341093797715641.205917478732398",
+      "cache_key": "windows-1.38.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/1.38.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/1.38.4/download",
+        "version": "1.38.4"
+      }
+    },
+    "7-zip": {
+      "version": "1.0.2",
+      "identifier": "dec0b1942996ee75b06097ba3f5e65d60e53a135",
+      "dotted_decimal_identifier": "62699313757263598.33126501184061278.111970037768501",
+      "cache_key": "7-zip-1.0.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/7-zip/versions/1.0.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/7-zip/versions/1.0.2/download",
+        "version": "1.0.2"
+      }
+    },
+    "chef_handler": {
+      "version": "1.2.0",
+      "identifier": "f1255ebe8b01fd471b4879aeccdbf940d90e388d",
+      "dotted_decimal_identifier": "67876558241202685.20014721439550683.274056914811021",
+      "cache_key": "chef_handler-1.2.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef_handler/versions/1.2.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef_handler/versions/1.2.0/download",
+        "version": "1.2.0"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+    "chef_client": {
+      "config": {
+        "ssl_verify_mode": ":verify_none"
+      }
+    }
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "tomcat-multi",
+        ">= 0.0.0"
+      ],
+      [
+        "ark",
+        "= 0.9.0"
+      ],
+      [
+        "windows",
+        "= 1.38.4"
+      ],
+      [
+        "7-zip",
+        "= 1.0.2"
+      ],
+      [
+        "chef_handler",
+        "= 1.2.0"
+      ]
+    ],
+    "dependencies": {
+      "ark (0.9.0)": [
+        [
+          "windows",
+          ">= 0.0.0"
+        ],
+        [
+          "7-zip",
+          ">= 0.0.0"
+        ]
+      ],
+      "windows (1.38.4)": [
+        [
+          "chef_handler",
+          ">= 0.0.0"
+        ]
+      ],
+      "7-zip (1.0.2)": [
+        [
+          "windows",
+          ">= 1.2.2"
+        ]
+      ],
+      "chef_handler (1.2.0)": [
+
+      ],
+      "tomcat-multi (0.1.0)": [
+        [
+          "ark",
+          ">= 0.0.0"
+        ]
+      ]
+    }
+  }
+}
